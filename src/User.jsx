@@ -1,9 +1,9 @@
-function User(props){
+function User({name = "Default"}){
     return (
         <div>
             <h1>User component</h1>
-            <h2>{props.user.name}</h2>
-            <h2>{props.user.age}</h2>
+            <h2>{name}</h2>
+   
         </div>
     )
 }

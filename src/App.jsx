@@ -2,27 +2,26 @@ import { useState } from "react"
 import User from "./User";
 import College from "./College";
 import Student from "./Student";
+import Wrapper from "./Wrapper";
 
 function App() {
 
-  let name = "Tanveer";
-  let age = 29;
-
-  let userObject = {
-    name : "Tanveer",
-     age : 29
-  }
-
-  let collegeNames = ['IET', 'DU', 'IIT'];
-  const [student, setStudent] = useState()
   return (  
     <div>
 
       <h1>Props in React</h1>
-      <User user = {userObject} />
-      <College names = {collegeNames}/>
-     { student && <Student name = {student}/>}
-     <button onClick={()=>setStudent("Ahmed")}>Update Student name</button>
+      <User name = "Tanveer"/>
+      <Wrapper color ="orange">
+      <h1>Wrapper 1 component</h1>
+      </Wrapper>
+
+      <Wrapper color = "green">
+      <h1>Wrapper 2 component</h1>
+      </Wrapper>
+
+      <Wrapper>
+      <h1>Wrapper 3 component</h1>
+      </Wrapper>
 
     </div>
 
