@@ -1,7 +1,9 @@
-function User(){
+function User(props){
     return (
         <div>
-            <h1>Tanveer</h1>
+            <h1>User component</h1>
+            <h2>{props.user.name}</h2>
+            <h2>{props.user.age}</h2>
         </div>
     )
 }

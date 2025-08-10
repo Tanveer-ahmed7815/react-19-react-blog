@@ -1,23 +1,28 @@
 import { useState } from "react"
 import User from "./User";
+import College from "./College";
+import Student from "./Student";
 
 function App() {
 
-  const [count, setCount] = useState(0);
+  let name = "Tanveer";
+  let age = 29;
 
-  return (
+  let userObject = {
+    name : "Tanveer",
+     age : 29
+  }
+
+  let collegeNames = ['IET', 'DU', 'IIT'];
+  const [student, setStudent] = useState()
+  return (  
     <div>
 
-      <h1>Multiple condition in React</h1>
-      <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>Counter</button>
-      {
-        count == 0 ? <h1>Condition 1</h1> 
-        : count == 1 ? <h1>Condition 2</h1> 
-        : count == 2 ? <h1>Condition 3</h1> 
-        : count == 3 ? <h1>Condition 4</h1> 
-        :null
-      }
+      <h1>Props in React</h1>
+      <User user = {userObject} />
+      <College names = {collegeNames}/>
+     { student && <Student name = {student}/>}
+     <button onClick={()=>setStudent("Ahmed")}>Update Student name</button>
 
     </div>
 
