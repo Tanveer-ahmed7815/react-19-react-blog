@@ -6,23 +6,15 @@ import Wrapper from "./Wrapper";
 
 function App() {
 
+  const [val,setVal] = useState("Tanveer")
+
   return (  
     <div>
 
-      <h1>Props in React</h1>
-      <User name = "Tanveer"/>
-      <Wrapper color ="orange">
-      <h1>Wrapper 1 component</h1>
-      </Wrapper>
-
-      <Wrapper color = "green">
-      <h1>Wrapper 2 component</h1>
-      </Wrapper>
-
-      <Wrapper>
-      <h1>Wrapper 3 component</h1>
-      </Wrapper>
-
+      <h1>Get input field value</h1>
+      <input type="text" value={val} onChange={(event)=>setVal(event.target.value)} placeholder="Enter username"/>
+      <h1>{val}</h1>
+      <button onClick={()=>setVal("")}>clear</button>
     </div>
 
   )
