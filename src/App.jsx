@@ -3,32 +3,75 @@ import CheckBoxes from "./CheckBoxes"
 
 function App() {
 
-  const [gender, setGender] = useState('female');
+  const userNames = ['tan', 'ria', 'san', 'ahm'];
 
-  const[city,setCity] = useState('delhi')
+  const userData = [
+    {
+      name: "Tan",
+      age: 29,
+      email: "tan@gmail.com"
+    },
+    {
+      name: "Sam",
+      age: 29,
+      email: "Sam@gmail.com"
+    },
+    {
+      name: "Ria",
+      age: 29,
+      email: "ria@gmail.com"
+    }
+  ]
 
   return (
     <div>
 
-      <h1>Handle Radio and Dropdown in React js</h1>
-      <h4>Select gender</h4>
-      <input type="radio" onChange={(event) => setGender(event.target.value)} name="gender" id="male"
-        value={"male"} checked={gender == 'male'}/>
-      <label htmlFor="male">Male</label>
-      <input type="radio" onChange={(event) => setGender(event.target.value)} name="gender" id="female"
-        value={"female"} checked={gender == 'female'} />
-      <label htmlFor="female">Female</label>
-      <h2>Selected Gender: {gender}</h2>
+      <h1>Loop in JSX with Map Function</h1>
 
-      <br /><br /><br />
-      <h4>Select city</h4>
-      <select onChange={(event)=>setCity(event.target.value)} defaultValue={"delhi"}>
-        <option value="noida">Noida</option>
-        <option value="gurgaon">Gurgaon</option>
-        <option value="delhi">Delhi</option>
-      </select>
+      <table border={1}>
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Email</td>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            userData.map((item,index) => (
+              <tr key={index}>
+                <td>{item.name}</td>
+                <td>{item.age}</td>
+                <td>{item.email}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
 
-      <h2>Selected city : {city}</h2>
+      <h1>Dummy data</h1>
+      <table border={1}>
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>age</td>
+            <td>email</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tan</td>
+            <td>29</td>
+            <td>tan@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Sam</td>
+            <td>29</td>
+            <td>sam@gmail.com</td>
+          </tr>
+        </tbody>
+      </table>
+
 
     </div>
 
