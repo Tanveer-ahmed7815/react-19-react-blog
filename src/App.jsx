@@ -1,41 +1,24 @@
 import { useState } from "react"
 import CheckBoxes from "./CheckBoxes"
 import User from "./User";
+import Clock from "./Clock";
 
 function App() {
 
-  const userNames = ['tan', 'ria', 'san', 'ahm'];
-
-  const userData = [
-    {
-      name: "Tan",
-      age: 29,
-      email: "tan@gmail.com"
-    },
-    {
-      name: "Sam",
-      age: 29,
-      email: "Sam@gmail.com"
-    },
-    {
-      name: "Ria",
-      age: 29,
-      email: "ria@gmail.com"
-    }
-  ]
+  const [color, setColor] = useState('green')
 
   return (
     <div>
 
-      <h1>Reuse component in Loop</h1>
+      <h1>Digital clock in React Js</h1>
+      <select onChange={(event) => setColor(event.target.value)}>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="orange">Orange</option>
+      </select>
+      <Clock color={color} />
 
-    {
-      userData.map((item,index)=>(
-        <div key={index}>
-          <User user = {item}/>
-        </div>
-      ))
-    }
 
     </div>
 
