@@ -1,8 +1,11 @@
-function Student({name}){
+function Student({ student }) {
     return (
         <div>
-            <h1>Student component</h1>
-            <h2>{name}</h2>
+            <ul>
+                <li>
+                    Name: {student.name}
+                </li>
+            </ul>
         </div>
     )
 }
