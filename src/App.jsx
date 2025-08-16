@@ -7,34 +7,19 @@ import Counter from "./Counter";
 
 function App() {
 
-  const [counter, setCounter] = useState(0);
-  useEffect(() => { 
-  //  callOnce();
-  }, [counter])
-
-  function callOnce() {
-    console.log("callOnce function called")
-  }
-
-  const[count, setCount] = useState(0);
-  const[data, setData] = useState(0);
-
-  const[display,setDisplay] = useState(true)
-
   return (
 
     <div>
 
-      <h1>useEffect hook</h1>
-      <button onClick={() => setCounter(counter + 1)}>Counter {counter}</button>
-
-      <hr />
-      {
-        display ? <Counter count = {count} data = {data} /> : null
-      }
-      <button onClick={()=>setCount(count + 1)}>Counter</button>
-      <button onClick={()=>setData(data + 1)}>Data</button>
-      <button onClick={()=>setDisplay(!display)}>Toggle</button>
+    <h1 style={{color:"red"}}>Inline style in React</h1>
+    <div>
+       <img style={{width:'200px'}} src="https://fastly.picsum.photos/id/145/536/354.jpg?hmac=Z4r_PULhGCx_ft_MM94T3oZEX_3u6Pvv9ip8ZoLveE8" alt="" />
+       <div>
+        <h4>Tanveer Ahmed</h4>
+        <p>Software developer</p>
+        
+       </div>
+    </div>
 
     </div>
 
