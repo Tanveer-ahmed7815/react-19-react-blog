@@ -1,14 +1,20 @@
-import { useEffect } from "react";
+import { use, useEffect } from "react";
 
 const Counter = ({ count, data }) => {
 
-    const getCounter = () => {
-        console.log("call only")
-    }
-
     useEffect(() => {
-        getCounter();
+        console.log("mounting phase")
     }, [])
+
+    useEffect(()=>{
+    console.log("updating phase")
+    },[count])
+
+    useEffect(()=>{
+        return ()=>{
+            console.log("unmounting phase");
+        }
+    },[])
 
     return (
         <div>

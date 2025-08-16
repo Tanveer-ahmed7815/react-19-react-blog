@@ -9,7 +9,7 @@ function App() {
 
   const [counter, setCounter] = useState(0);
   useEffect(() => { 
-    callOnce();
+  //  callOnce();
   }, [counter])
 
   function callOnce() {
@@ -19,6 +19,8 @@ function App() {
   const[count, setCount] = useState(0);
   const[data, setData] = useState(0);
 
+  const[display,setDisplay] = useState(true)
+
   return (
 
     <div>
@@ -27,9 +29,12 @@ function App() {
       <button onClick={() => setCounter(counter + 1)}>Counter {counter}</button>
 
       <hr />
-      <Counter count = {count} data = {data} />
+      {
+        display ? <Counter count = {count} data = {data} /> : null
+      }
       <button onClick={()=>setCount(count + 1)}>Counter</button>
       <button onClick={()=>setData(data + 1)}>Data</button>
+      <button onClick={()=>setDisplay(!display)}>Toggle</button>
 
     </div>
 
