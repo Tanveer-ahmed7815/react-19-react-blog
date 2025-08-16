@@ -1,90 +1,35 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import CheckBoxes from "./CheckBoxes"
 import User from "./User";
 import Clock from "./Clock";
 import College from "./College";
+import Counter from "./Counter";
 
 function App() {
 
-  const collegeData = [
-    {
-      name: "IIT Mumbai",
-      city: "Mumbai",
-      website: "www.iitmumbai.com",
-      student: [
-        {
-          name: "Tanveer",
-          age: '29',
-          email: 'tanveer@gmail.com'
-        },
-        {
-          name: "Ahmed",
-          age: '20',
-          email: 'ahmed@gmail.com'
-        },
-        {
-          name: "Peter",
-          age: '25',
-          email: 'peter@gmail.com'
-        }
-      ]
-    },
-    {
-      name: "IIT Delhi",
-      city: "Delhi",
-      website: "www.iitdelhi.com",
-      student: [
-        {
-          name: "Tanveer",
-          age: '29',
-          email: 'tanveer@gmail.com'
-        },
-        {
-          name: "Ahmed",
-          age: '20',
-          email: 'ahmed@gmail.com'
-        },
-        {
-          name: "Peter",
-          age: '25',
-          email: 'peter@gmail.com'
-        }
-      ]
-    },
-    {
-      name: "IIT Madras",
-      city: "Madras",
-      website: "www.iitmadras.com",
-      student: [
-        {
-          name: "Tanveer",
-          age: '29',
-          email: 'tanveer@gmail.com'
-        },
-        {
-          name: "Ahmed",
-          age: '20',
-          email: 'ahmed@gmail.com'
-        },
-        {
-          name: "Peter",
-          age: '25',
-          email: 'peter@gmail.com'
-        }
-      ]
-    }
-  ]
+  const [counter, setCounter] = useState(0);
+  useEffect(() => { 
+    callOnce();
+  }, [counter])
+
+  function callOnce() {
+    console.log("callOnce function called")
+  }
+
+  const[count, setCount] = useState(0);
+  const[data, setData] = useState(0);
 
   return (
+
     <div>
 
-      {/* <h1>Nested Looping with Component</h1> */}
-      {collegeData.map((college, index) => (
-        <div key={index}>
-          <College college={college} />
-        </div>
-      ))}
+      <h1>useEffect hook</h1>
+      <button onClick={() => setCounter(counter + 1)}>Counter {counter}</button>
 
+      <hr />
+      <Counter count = {count} data = {data} />
+      <button onClick={()=>setCount(count + 1)}>Counter</button>
+      <button onClick={()=>setData(data + 1)}>Data</button>
 
     </div>
 
