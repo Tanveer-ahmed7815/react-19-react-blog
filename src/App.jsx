@@ -5,6 +5,7 @@ import Clock from "./Clock";
 import College from "./College";
 import Counter from "./Counter";
 import './css/style.css'
+import UserProfile from "./UserProfile";
 
 function App() {
 
@@ -12,71 +13,9 @@ function App() {
 
     <div>
 
-      <h1 className="heading">External style in React</h1>
-      <div className="container">
-        <div className="user-card">
-          <div>
-            <img className="img-style" src="https://fastly.picsum.photos/id/145/536/354.jpg?hmac=Z4r_PULhGCx_ft_MM94T3oZEX_3u6Pvv9ip8ZoLveE8" alt="" />
-          </div>
-          <div className="text-wrap">
-            <h4>Piano</h4>
-          </div>
-        </div>
-
-        <div className="user-card">
-          <div>
-            <img className="img-style" src="https://fastly.picsum.photos/id/145/536/354.jpg?hmac=Z4r_PULhGCx_ft_MM94T3oZEX_3u6Pvv9ip8ZoLveE8" alt="" />
-          </div>
-          <div className="text-wrap">
-            <h4>Piano</h4>
-          </div>
-        </div>
-
-        <div className="user-card">
-          <div>
-            <img className="img-style" src="https://fastly.picsum.photos/id/145/536/354.jpg?hmac=Z4r_PULhGCx_ft_MM94T3oZEX_3u6Pvv9ip8ZoLveE8" alt="" />
-          </div>
-          <div className="text-wrap">
-            <h4>Piano</h4>
-          </div>
-        </div>
-
-        <div className="user-card">
-          <div>
-            <img className="img-style" src="https://fastly.picsum.photos/id/145/536/354.jpg?hmac=Z4r_PULhGCx_ft_MM94T3oZEX_3u6Pvv9ip8ZoLveE8" alt="" />
-          </div>
-          <div className="text-wrap">
-            <h4>Piano</h4>
-          </div>
-        </div>
-
-        <div className="user-card">
-          <div>
-            <img className="img-style" src="https://fastly.picsum.photos/id/145/536/354.jpg?hmac=Z4r_PULhGCx_ft_MM94T3oZEX_3u6Pvv9ip8ZoLveE8" alt="" />
-          </div>
-          <div className="text-wrap">
-            <h4>Piano</h4>
-          </div>
-        </div>
-
-        <div className="user-card">
-          <div>
-            <img className="img-style" src="https://fastly.picsum.photos/id/145/536/354.jpg?hmac=Z4r_PULhGCx_ft_MM94T3oZEX_3u6Pvv9ip8ZoLveE8" alt="" />
-          </div>
-          <div className="text-wrap">
-            <h4>Piano</h4>
-          </div>
-        </div>
-
-        <div className="user-card">
-          <div>
-            <img className="img-style" src="https://fastly.picsum.photos/id/145/536/354.jpg?hmac=Z4r_PULhGCx_ft_MM94T3oZEX_3u6Pvv9ip8ZoLveE8" alt="" />
-          </div>
-          <div className="text-wrap">
-            <h4>Piano</h4>
-          </div>
-        </div>
-      </div>
+      <h1 >Style with CSS Module in React JS</h1>
+      <UserProfile />
+      
     </div>
 
   )
