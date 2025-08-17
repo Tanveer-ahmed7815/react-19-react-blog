@@ -1,20 +1,31 @@
-import { useEffect, useState } from "react"
-import CheckBoxes from "./CheckBoxes"
-import User from "./User";
-import Clock from "./Clock";
-import College from "./College";
-import Counter from "./Counter";
-import './css/style.css'
-import UserProfile from "./UserProfile";
+import styled from "styled-components"
 
 function App() {
+
+  // const Heading = styled.h1`
+  // color:red;
+  // border:1px solid green
+  // `
+
+  const Heading = styled.h1({
+    color:"red",
+    border:"1px solid green"
+  })
+
+  const StyleBtn = styled.button`
+  color:red;
+  width:130px
+  `
 
   return (
 
     <div>
 
-      <h1 >Style with CSS Module in React JS</h1>
-      <UserProfile />
+      <h1 >Styled component in React JS</h1>
+   
+      <Heading>Hello</Heading>
+
+      <StyleBtn>Login</StyleBtn>
       
     </div>
 
