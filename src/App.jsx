@@ -1,31 +1,28 @@
 import styled from "styled-components"
+import { Button } from "react-bootstrap"
+import { Alert } from "react-bootstrap"
+import BasicExample from "./BasicExample"
 
 function App() {
 
-  // const Heading = styled.h1`
-  // color:red;
-  // border:1px solid green
-  // `
-
-  const Heading = styled.h1({
-    color:"red",
-    border:"1px solid green"
-  })
-
-  const StyleBtn = styled.button`
-  color:red;
-  width:130px
-  `
 
   return (
 
     <div>
 
-      <h1 >Styled component in React JS</h1>
-   
-      <Heading>Hello</Heading>
+      <h1 >Add Bootstrap in React JS</h1>
+      <Button>Ok</Button>
+      <br />
+      <br />
+      <Button variant="warning">Warning</Button>
+      <br />
+      <button>Ok</button>
 
-      <StyleBtn>Login</StyleBtn>
+      <Alert>Hello React-bootstrap installed</Alert>
+
+      <BasicExample />
+
+
       
     </div>
 
