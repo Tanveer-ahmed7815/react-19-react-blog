@@ -1,29 +1,24 @@
-import styled from "styled-components"
-import { Button } from "react-bootstrap"
-import { Alert } from "react-bootstrap"
-import BasicExample from "./BasicExample"
+import { useRef } from "react"
+
 
 function App() {
+
+  const inputRef = useRef(null);
+  const inputHandler = () => {
+    console.log(inputRef);
+    inputRef.current.focus();
+    inputRef.current.style.color = 'red'
+  }
 
 
   return (
 
     <div>
 
-      <h1 >Add Bootstrap in React JS</h1>
-      <Button>Ok</Button>
-      <br />
-      <br />
-      <Button variant="warning">Warning</Button>
-      <br />
-      <button>Ok</button>
+      <h1 >useRef in React JS</h1>
+      <input ref={inputRef} type="text" placeholder="Enter username" />
+      <button onClick={inputHandler}>Focus on Input field</button>
 
-      <Alert>Hello React-bootstrap installed</Alert>
-
-      <BasicExample />
-
-
-      
     </div>
 
   )
