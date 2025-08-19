@@ -1,27 +1,25 @@
 import { useRef } from "react"
 import User from "./User"
+import UserInput from "./UserInput";
 
 
 function App() {
 
-  const displayName =(name)=>{
-    alert(name)
-  }
+  const inputRef = useRef(null)
 
-  const getUser =()=>{
-    alert("get user function")
+  const updateInput = ()=>{
+    console.log("updateInput function");
+    inputRef.current.value = 1000;
+    inputRef.current.focus();
   }
 
   return (
 
     <div>
 
-      <h1 >Call Parent component  function  from child component</h1>
-      <User displayName={displayName} name="Tanveer" getUser={getUser} />
-      <User displayName={displayName} name="Ahmed" getUser={getUser}/>
-      <User displayName={displayName} name="Ria" getUser={getUser}/>
-      <User displayName={displayName} name="Aru" getUser={getUser}/>
-      <User displayName={displayName} name="Shanu" getUser={getUser}/>
+      <h1 >Forward Ref</h1>
+      <UserInput ref={inputRef}/>
+      <button onClick={updateInput}>Update Input field</button>
      
     </div>
 
